@@ -21,10 +21,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - run: yarn install
-            - name: Run prettier
-              uses: borales/actions-yarn@v2.0.0
-              with:
-                  cmd: prettier
+            - run: yarn prettier
             - name: Run eslint
               uses: a-b-r-o-w-n/eslint-action@v1
               with:
