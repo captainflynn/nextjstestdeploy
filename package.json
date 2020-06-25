@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8080"
+    "start": "next start -p 8080",
+    "prettier": "prettier --check */**/*.{js,ts,tsx}",,
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "dependencies": {
     "next": "9.4.4",
