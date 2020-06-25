@@ -20,8 +20,8 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: yarn install
-            - run: yarn run prettier
+            - run: yarn install --pure-lockfile
+            - run: yarn prettier
             - name: Run eslint
               uses: a-b-r-o-w-n/eslint-action@v1
               with:
