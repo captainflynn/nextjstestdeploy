@@ -28,4 +28,7 @@ jobs:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
                   files: 'components/**/*'
                   extensions: '.js,.ts'
-            - run: yarn linter
+            - run: yarn lint
+            - run: pm2 reload next-js
+              env:
+                CI: true
