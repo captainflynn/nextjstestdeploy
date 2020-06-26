@@ -29,6 +29,8 @@ jobs:
                   files: 'components/**/*'
                   extensions: '.js,.ts'
             - run: yarn build
+            - run: ls
+            - run: cd ..
             - run: pm2 reload next-js
               env:
                 CI: true
