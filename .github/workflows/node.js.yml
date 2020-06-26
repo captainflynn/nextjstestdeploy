@@ -29,6 +29,7 @@ jobs:
                   files: 'components/**/*'
                   extensions: '.js,.ts'
             - run: yarn build
+            - run: cd ~
             - run: rm -r production/*
             - run: mv actions-runner/_work/nextjstestdeploy/nextjstestdeploy production/
             - run: pm2 reload next-js
